@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="es">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Plan Global</title>
+    <link rel="stylesheet" href="css/estilos.css" >
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="js/jquery-ui.css" />
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    
+    
+    <script>
+        $(function($){
+            $.datepicker.regional['es'] = {
+                closeText: 'Cerrar',
+                prevText: '<Ant',
+                nextText: 'Sig>',
+                currentText: 'Hoy',
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+                dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''
+                
+            };
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+        });
+        
+        $(function() {
+        $( "#datepicker" ).datepicker();
+        });
+    </script>
+
+    
+</head>
+
+
+    
+<body>
+    
+    <header>
+        <nav id="nav_superior_izq">
+                <a href="#">Inicio</a>
+                <a href="#">Planes Globales</a>
+                <a href="#">Ayuda</a>
+        </nav>
+        
+        <h1><a href="#" id="logo" title="ir al inicio">Sistema Administrador de Planes Globales</a> </h1>
+            
+        <nav id="nav_principal">
+            <div id=navegador>
+                <a href="#">Inicio/</a>
+                <a href="#">Plan Global/</a>
+                <a href="#">Plan Global/</a>
+                <a href="#">Identificación</a>
+            </div>
+         </nav>
+    </header>
+    
+    <div id="contenedor_principal">
+        
+        <div id="contenedor_izquierdo">
+            
+            <nav id="nav_izq">
+                <a href="#"onclick="click1()">Identificación<input type="checkbox" name="validar"></a>
+                <a href="#"onclick="click2()">Justificación General<input type="checkbox" name="validar"></a> 
+                <a href="#"onclick="click3()">Propósitos Generales<input type="checkbox" name="validar"></a>
+                <a href="#"onclick="click4()">Objetivos Generales<input type="checkbox" name="validar"></a>
+                
+                
+                <a href="#" onclick="click5()">Bibliografía<input type="checkbox" name="validar"></a>
+                
+                <a href="#"onclick="click6()">Estructuración de Unidades<input type="checkbox" name="validar"></a>
+                <a href="#" onclick="click7()">Evaluación<input type="checkbox" name="validar"></a>
+                <a href="#" onclick="generarCronograma()">Cronograma<input type="checkbox" name="validar"></a>
+            </nav>
+            
+        </div>
+        
+        <div id="contenedor_central">
+
+            <!------------------------------------------------------------------pag 1-------------------->
+            <fieldset>
+            
+                <form name="form1" method="POST" action="registroPG.php" >
+                
+                    
+                <div id="pagina1">  
+                    
+                <h1>I.Identificación</h1>
+				<fieldset>
+
+						<legend>DESCRIPCIÓN MATERIA</legend>
+					    <label for="asignatura">ASIGNATURA:</label>
+						<input  type="text" name="asignatura" id="asignatura" required
+						pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ0-9 ]{2,50}"
+						title="El campo soporta caracteres alfanúmericos"/>
+					 	<br>
+
+
+						<label for="sigla">SIGLA:</label>
+						<input  type="text" name="sigla" id="sigla" required
+						pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ0-9- ]{2,20}" class="sig"
+						title="El campo no debe contener caracteres especiales {!@#$%^*:;[]()+/~}"/>
+						<br>
+
+						<label for="cod_sis">COD_SIS:</label>
+						<input  type="text" name="cod_sis" id="cod_sis" required
+						pattern="[0-9]{1,20}"
+						title="Debe introducir caracteres númericos"/>
+						<br>
+
+						<label for="nivel">NIVEL(AÑO/SEMESTRE):</label>
+						<input  type="text" name="nivel" id="nivel" required
+						pattern="[a-jA-J1-5]{1}"
+						title="Debe introducir un caracter que esté dentro del rango de A-J o 1-5"/>
+						<br>
+
+						<label for="requisitos">PRE-REQUISITOS:</label>
+						<input  type="text" name="requisitos" id="requisitos" required
+						pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ0-9,. ]{2,200}"
+						title="El campo no debe contener caracteres especiales {!@#$%^*:;[]()+/~}-"/>
+						<br>
+
+				</fieldset>
+
+
+
+
+				<fieldset>
+						<legend>ÁREA DE COORDINACIÓN CURRICULAR</legend>
+
+						<label for="vertical">VERTICAL:</label>
+						<input  type="text" name="vertical" id="vertical" required
+						pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ0-9,. ]{1,50}"
+						title="El campo no debe contener caracteres especiales {!@#$%^*;:[]()+/~}-"/>
+						<br >
+
+						<label for="horizontal">HORIZONTAL:</label>
+						<input  type="text" name="horizontal" id="horizontal" required
+						pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ0-9,. ]{1,50}"
+						title="El campo no debe contener caracteres especiales {!@#$%^*;:[]()+/~}-"/>
+
+						<br>
+					
+						<table id="tablaHorario" border="1">
+							<!-- Cuerpo de la tabla con los campos -->
+						<tbody>
+							<!-- fila base para clonar y agregar al final -->
+							<tr class="fila-baseH">
+
+								<td>
+								  <select id="selectd" name="selectDia[]">
+									<option value="">-------Elegir día-------</option>
+									<option value="l">Lunes</option>
+									<option value="m">Martes</option>
+									<option value="mi">Miércoles</option>
+									<option value="j">Jueves</option>
+									<option value="v">Viernes</option>
+									<option value="s">Sábado</option>
+								  </select>
+								</td>
+								
+								<td>
+								  <input  type="text" name="horario[]" id="horaioinput"
+		 							pattern="[0-9:]{4,5}"
+		 							title="El formato de hora es el siguiente: 00:00}"/>
+								</td>
+								<td>
+									<input  type="text" name="aula[]" id="aulainput"
+		 							pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ()0-9- ]{1,10}"
+		 							title="El campo no debe contener caracteres especiales {!@#$%^*;:[]+/~}"/>
+								</td>
+
+								<td class="eliminar" onclick="eliminarHorario()" >Eliminar</td>
+
+							</tr>
+								<!-- fin de código: fila base -->
+						 
+								<!-- Fila de ejemplo -->
+							<tr>
+			  					<tr>
+								    <td align="center"><label id="diaLabel">DÍA</label></td>
+									<td align="center"><label id="horarioLabel">HORA</label></td>
+									<td align="center"><label id="aulaLabel">AULA</label></td>
+									<td rowspan="2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+								</tr>
+									<td>
+									  <select id="selectd" name="selectDia[]">
+										<option value="">-------Elegir día-------</option>
+										<option value="l">Lunes</option>
+										<option value="m">Martes</option>
+										<option value="mi">Miércoles</option>
+										<option value="j">Jueves</option>
+										<option value="v">Viernes</option>
+										<option value="s">Sábado</option>
+									  </select>
+									</td>
+
+									<td>
+									  <input  type="text" name="horario[]" id="horarioinput1" required
+			 							pattern="[0-9 :]{4,5}" title="El formato de hora es el siguiente: 00:00}"/>
+									</td>
+									<td>
+										<input  type="text" name="aula[]" id="aulainput1" required
+			 							pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ()0-9- ]{1,10}"
+			 							title="El campo no debe contener caracteres especiales {!@#$%^*;:[]+/~}"/>
+									</td>
+
+							</tr>
+
+
+
+						</tbody>
+					</table>
+
+				<!--<input type="button" id="agregarHorario" value="Agregar horario" />-->
+                <a id='agregarHorario' onclick="agregarHorario()">Agregar Horario</a>
+
+
+				</fieldset>
+
+				<fieldset>
+						<legend>DOCENTE</legend>
+					    <label for="nombre">NOMBRE:</label>
+						<input  type="text" name="nombre" id="nombre" required placeholder="Nombre Completo"
+						 pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ. ]{1,48}"
+						 title="El campo no debe contener números ni caracteres especiales {!@#$%^*:;,()+/~}"/>
+					 	<br>
+
+						<label for="direccion">DIRECCIÓN:</label>
+						<input  type="text" name="direccion" id="direccion" required placeholder="Domicilio"
+						pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ.-/ ]{1,48}"
+						title="El campo no debe contener caracteres especiales {!@#$%^*:;,()+/~}"/>
+						<br>
+
+						<label for="telefono">TELÉFONO</label>
+						<input  type="text" name="telefono" id="telefono" required placeholder="Ej. 4XXXXXX"
+						pattern="[0-9-]{6,20}"
+						title="El campo no debe contener caracteres especiales {!@#$%^*()+/~}"/>
+						<br>
+
+						<label for="email">EMAIL:</label>
+						<input  type="email" name="EMAIL:" id="email" required placeholder="ejemplo@htomail.com"
+						class="mail"/>
+						<br>
+
+				</fieldset> 
+            </div>
+<!-------------------------------------------pagina 2---------------------------------------------------------------------->
+            <div id="pagina2">
+                <h1>II.Justificación General</h1>
+
+                <fieldset>
+                    <legend>RAZÓN DE SER DE LA ASIGNATURA</legend>
+                    <textarea name="justif_razon" rows="7" cols="75" required ></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>POR QUÉ SE ENSEÑA Y POR QUÉ ESTÁ DENTRO DEL PLAN DE ESTUDIOS</legend>
+                    <textarea name="justif_porque" rows="7" cols="75" required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>EN QUÉ MEDIDA CONTRIBUYE A LA FORMACIÓN INTEGRAL DEL PROFESIONAL</legend>
+                    <textarea name="justif_enque" rows="7" cols="75" required></textarea>
+                </fieldset>
+            </div> 
+<!-------------------------------------------pagina 3---------------------------------------------------------------------->
+            <div id="pagina3">
+                <h1>III.Propósito General</h1>
+                <fieldset>
+                    <legend>PROPÓSITO GENERAL</legend>
+                    <textarea name="proposito_gral"  rows="7" cols="75"  required></textarea>
+                </fieldset>   
+            </div>
+<!-------------------------------------------pagina 4---------------------------------------------------------------------->  
+            <div id="pagina4">
+                
+                <h1>IV.Objetivo General</h1>
+                <fieldset>
+                    <legend>OBJETIVO GENERAL</legend>
+                    <textarea name="objetivo_gral" rows="7" cols="75" required></textarea>
+                </fieldset>  
+            </div>
+<!-------------------------------------------pagina 5---------------------------------------------------------------------->
+        <div id="pagina5">
+                <h1>V.Bibliografia</h1>
+                <fieldset>
+                    <legend>LIBROS</legend>
+
+                    <!--<a href="#" onclick="agregarLibro3()" class="enlaceBoton">Agregar Libro</a>-->
+                    <div id="contenedorLibros">
+                    <fieldset>
+
+                    <h3 class="titulo_libros">Código Libro:</h3>
+                    <input type="text" name="codigo_libro[]" readonly style="background: #D8D8D8"/>
+                    
+                    <h3 class="titulo_libros">Nombre Autor(s):</h3>
+                    <input type="text" name="autor[]" onblur="generarCodigoLibro(this)" rows="7" cols="75" required pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ ]{1,48}" title="El campo no debe contener números ni caracteres especiales {!@#$%^*:;,()+/~}"/>
+
+                    <h3 class="titulo_libros">Título Libro:</h3>
+                    <input type="text" name="titulo_libro[]" rows="7" cols="75" required pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ0-9 ]{1,48}" title="El campo no debe contener caracteres especiales {!@#$%^*:;[]()+/~}"/>
+
+                    <h3 class="titulo_libros">Editorial:</h3>
+                    <input type="text" name="editorial[]" rows="7" cols="75" required pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ0-9 ]{1,48}" title="El campo no debe contener caracteres especiales {!@#$%^*:;[]()+/~}"/>
+
+                    <h3 class="titulo_libros">Año Edición:</h3>
+                    <input type="text" name="anio_publicacion[]" onblur="generarCodigoLibro(this)" pattern="[0-9]{4}" title="El campo debe contener 4 caracteres numéricos"/>
+
+                    <!--<a class="libroEliminado" onclick="eliminarLibro(this)">Eliminar</a>-->
+
+                    </fieldset>
+        
+
+
+                    <div id="libronuevo"></div>
+                    </div>
+
+                    <a onclick="agregarLibro()" class="aAgregarBiblio">Agregar Libro</a>
+
+                </fieldset>
+            </div>        
+                    
+                    
+<!-------------------------------------------pagina 6---------------------------------------------------------------------->                    
+                     
+            <div id="pagina6">
+                <h1>VI.Estructuras de las unidades didácticas</h1>
+                
+                <div id="contenedorUnidades">
+                <fieldset>
+                <label id="unidad" for="nombreunidad">NOMBRE DE LA UNIDAD:</label>
+                <input  type="text"  id="nombreunidad" name="nombre_uni[]" required pattern="[a-zA-ZáéíóúñÁÉÍÓÚÑ0-9 ]{1,48}"
+                title="El campo no debe contener caracteres especiales {!@#$%^*:;[]()+/~}"/>
+
+                <label id="periodo" for="periodoacademico">DURACIÓN DE LA UNIDAD EN PERIODOS ACADÉMICOS:</label>
+                <input  type="text" name="duracion_uni[]" id="periodoacademico" onkeyup="controlarNumPeriodo(this)" value="0" required pattern="[0-9]{1,10}" title="El campo solamente soporta caracteres numéricos"/>
+
+
+                <fieldset>
+                    <legend>OBJETIVO DE LA UNIDAD</legend>
+                    <textarea name="objetivo_uni[]" rows="7" cols="75" required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>CONTENIDO</legend>
+                    <textarea name="contenido_uni[]" rows="7" cols="75" required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <table border>
+                        <tr>
+                            <td align="center" rowspan="6" colspan="2">METODOLOGÍA <br>DE<br> ENSEÑANZA</td>
+                            <td>TÉCNICAS PREDOMINANTES PROPUESTAS PARA LA UNIDAD</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><textarea name="tecnica_met[]" rows="7" cols="59" required></textarea></td>
+                        </tr>   
+                        
+                        <tr>
+                            <td>EVALUACIÓN DE LA UNIDAD</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><textarea name="evaluacion_met[]" rows="7" cols="59" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð0-9 ,.-]{2,48}"></textarea></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>BIBLIOGRAFÍA ESPECÍFICA DE LA UNIDAD</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <input name="codigo_libro_met[]">
+                                <select id="libros" name="selectLibros" onclick="aumentarCodigos(this)" onchange="javascript:ShowSelected(this)">
+                                <option value="">----Elija un libro----</option>
+                                <option value="1"></option>
+                                </select>
+                            </td> 
+                        </tr>
+
+                        <!--<td class="unidadEliminada" onclick="eliminarUnidad3()">Eliminar</td>-->
+                    </table>
+                </fieldset>
+
+                </fieldset>
+
+
+               <div id="unidadNueva"> </div>
+
+                <br>
+                </div>
+                <a onclick="agregarUnidad()" class="aAgregarUnidad">Agregar Unidad</a>
+
+            </div>
+ <!-------------------------------------------pagina 7---------------------------------------------------------------------->
+            <div id="pagina7">
+                <h1>VII.Evaluación</h1>
+                <fieldset>
+                            <legend>EVALUACIÓN</legend>
+
+                            <strong>Descripción del tipo de evaluación:</strong><br>
+                            <br>
+                            <table id="tabla0">
+                                
+                             <tbody>
+
+                                <tr class="fila-base0">
+                                 <td>
+                                    <select id="descripcion" name="tipo_evaluacion[]" onchange="verificarDiferente(this)" >
+                                            <option value="0" >--Forma de Evaluación--</option>
+                                            <option value="Examen">Examen</option>
+                                            <option value="Tareas">Tareas</option>
+                                            <option value="Repasos">Repasos</option>
+                                            <option value="Prácticas">Prácticas</option>
+                                            <option value="Proyectos">Proyectos</option>
+                                            <option value="Exposición">Exposición</option>
+                                            <option value="Otros">Otros</option>
+                                    </select>
+                                 </td>
+                            
+                                            <td><textarea rows="1" cols="40" name="descripcion_eva[]" ></textarea></td>
+                                            <td class="eliminar0" onclick="eliminarEvaluacion()">Eliminar</td>
+                                </tr>
+                                <tr>
+                                 <td>
+                                    <select id="descripcion" name="tipo_evaluacion[]" onchange="verificarDiferente(this)" required>
+                                            <option value="0">--Forma de Evaluación--</option>
+                                            <option value="Examen">Examen</option>
+                                            <option value="Tareas">Tareas</option>
+                                            <option value="Repasos">Repasos</option>
+                                            <option value="Prácticas">Prácticas</option>
+                                            <option value="Proyectos">Proyectos</option>
+                                            <option value="Exposición">Exposición</option>
+                                            <option value="Otros">Otros</option>
+                                    </select>
+                                 </td>
+                            
+                                            <td><textarea rows="1" cols="40" name="descripcion_eva[]" required></textarea></td>
+                                </tr>
+
+                             </tbody>
+
+                            </table>
+
+                            <!--<input type="button" id="agregar0" class="agregar0" onclick="agregarEvaluacion()" value="Agregar" />-->
+                            <a id='agregar0' class="aAgregarEvaluacion" onclick="agregarEvaluacion()">Agregar</a>
+                            <br> <br> <br>
+
+                            <label><strong>Primer Parcial:</strong></label>
+                            <br> <br>
+                            <table id="tabla1">
+                            
+                            
+                            </table>
+                            
+                            <br><br>
+
+                            <label><strong>Segundo Parcial:</strong></label>
+                            <br> <br>
+                            <table id="tabla2"> 
+                        
+
+                            </table>
+            
+                        <br><br>
+                        <strong>-Examen Final y Segunda Instancia:</strong> Comprende todos los temas desarrollados durante el semestre, &nbsp;incluyendo lecturas bibliográficas, práticas, investigaciones,etc.<br>
+                        <strong>-Examen de Mesa:</strong> Tomar en cuenta como base el material determinado para el examen final.
+
+                          </fieldset>
+            </div>      
+  <!-------------------------------------------pagina 8---------------------------------------------------------------------->          
+        <div id="pagina8">
+           
+            <h1>VIII.Cronograma</h1>
+            <fieldset>
+                    
+            <div id="cronograma"></div>
+
+
+            </fieldset>  
+                    
+        
+        </div>
+              
+    
+                <input id="boton" type="submit" name ='guardarPG' value="Registrar">   
+
+
+
+  
+                </form>
+                
+            </fieldset>
+        
+        </div>
+        
+        <div id="contenedor_derecho">
+            <div id="avisos" >
+                <fieldset > 
+                    <legend >Avisos</legend>
+                    <textarea id="campoAvisos" ></textarea>
+                </fieldset >
+            </div>
+            
+            <div id="calendario">
+                <div id="datepicker">
+
+                </div>
+            </div>
+            
+        
+        </div>
+    
+    <footer>
+        <!--<?php include('visitas.php');?>-->
+        <h4 >Webs Amigas : <a class="paginas_amigas" href="#">UMSS</a> | <a class="paginas_amigas" href="#">WEBSISS</a> | <a class="paginas_amigas" href="#">FCYT</a> | <a class="paginas_amigas" href="#">MEMI</a> | <a class="paginas_amigas" href="#">MOODLE</a> | <a class="paginas_amigas" href="#">SCESI</a></h4>
+    </footer>
+    
+</body>
+</html>
+        
+
+
+<!---------------------------otro---------------------------------------------------->

@@ -1,0 +1,756 @@
+header{
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#nav_superior_izq{
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    background-color: #176666;
+}
+#nav_superior_izq > a{
+    display: inline-block;
+    padding: 1px 15px;
+    color:aliceblue;
+    
+}
+#nav_superior_izq > a:hover{
+    color: #339999;
+    
+}
+
+header > h1 {
+    width: 100%;
+    height: 120px;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    text-align: center;
+    background: url('../img/umss.png')left bottom no-repeat    #FAFAFA;
+    background-size: 67px;
+    background-position: 60px;
+    
+}
+
+#logo {
+    color:#176666;
+    font-size: 50px;
+    font-weight: 100px;
+    
+}
+
+#nav_principal{
+    margin: 0;
+    padding: 0;
+    padding: 0 20% 0 20%;
+    background-color: #FAFAFA;
+    
+}
+#navegador{
+    border-bottom: 3px solid #339999;
+}
+#nav_principal a{
+    
+    display: inline-block;
+    padding: 1px 10px;
+    color:#176666;
+    
+}
+
+#contenedor_principal{
+    padding: 0;
+    margin: 0;
+    width:100%;
+    height: 100%;
+    
+}
+#contenedor_izquierdo{
+    margin: 0;
+    padding: 0;
+    width:25%;
+    height: 950px;
+    display: block;
+    float: left;
+    background: #F2F2F2;
+    
+}
+#nav_izq{
+    margin: 20px 0 0 0;
+    padding: 0;
+    display: inline-block;
+    
+}
+
+#nav_izq > a{
+    margin: 7px 0 0 0   ;
+    padding: 7px 20px;
+    border: 1px solid #176666;
+    font-size:18px;
+    box-shadow: 2px;
+    color: #176666;
+    display: block;
+    background-color: #eee;
+}
+
+#nav_izq > a:hover{
+    color: aliceblue;
+    background-color: #176666;
+}
+/*---------contenedor central---*/
+#contenedor_central{
+    margin: 0;
+    padding: 30px 0 0 0 ;
+    width: 50%;
+    height: 950px;
+    display: block;
+    float: left;
+    background: #F2F2F2;
+}
+
+
+/*--------------------pag1-----*/
+#pagina1 {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    display: none;
+    
+}
+
+#pagina1 h1{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-color: 3px solid aqua;
+    background-color: #176666;
+    color: aliceblue;
+}
+
+#pagina1 legend{
+    margin: 5px;
+    color: #086A87;
+    background: #D8D8D8;
+    
+}
+
+#pagina1 label {
+    margin: 2px 0;
+    padding: 0;
+    width: 32%;
+    color: #086A87;
+    text-align: left;
+    display: inline-block;
+    
+}
+
+#pagina1 #asignatura{
+    margin: 1px;
+    width: 65%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #sigla{
+    margin: 1px;
+    width: 65%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #cod_sis{
+    margin: 1px;
+    width: 65%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #nivel{
+    margin: 1px;
+    width: 65%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #requisitos{
+    margin: 1px;
+    width: 65%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #vertical{
+    margin: 1px;
+    width: 65%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #horizontal{
+    margin: 1px;
+    width: 65%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #tablaHorario{
+    border: solid 1px #333;
+    width: auto;
+}
+#pagina1 .fila-baseH{
+    display: none;
+    
+}
+#pagina1 .eliminar{
+    cursor: pointer;
+    color: #A4A4A4;
+}
+#pagina1 #selectd{
+    width: 150px;
+}
+#pagina1 #diaLabel{
+    text-align: center;
+    width: 150px;
+}
+
+#pagina1 #horarioLabel{
+    text-align: center;
+    width: 150px;
+}
+#pagina1 #aulaLabel{
+    text-align: center;
+    width: 150px;
+}
+#pagina1 #horarioinput1{
+    width: 97%;
+    border: 2px solid #339999;
+}
+#pagina1 input1{
+     width: 97%;
+    border: 2px solid #339999
+}
+/*#pagina1 #horarioinput{
+    width: 97%;
+    border: 2px solid #339999
+}
+#pagina1 #aulainput1{
+    width: 97%;
+    border: 2px solid #339999;
+    
+}*/
+
+#pagina1 #tabla{
+    border: solid 1px #333;	width: 600px; 
+}
+
+/*.fila-base{ display: none; }*/
+.fila-base0{ display: none; }
+/*.fila-base1{ display: none; }
+.fila-base2{ display: none; } /* fila base oculta */
+
+.eliminar{ cursor: pointer; color: #A4A4A4; }
+
+#pagina1 input {
+    margin: 1px;
+    width: 97%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #nombre{
+    margin: 1px;
+    width: 65%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #direccion{
+    margin: 1px;
+    width: 65%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #telefono{
+    margin: 1px;
+    width: 65%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #email{
+    margin: 1px;
+    width: 65%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina1 #agregarHorario{
+    text-decoration: none;
+    background: #d8d8d8;
+    color: #086A87;
+    border: 1px outset #CCC;
+    margin: 1em 0; float: left; clear: left;
+}
+
+#pagina1 #agregarHorario:hover {
+    background: #CCB;
+}
+
+/*-------------pag2----------*/
+#pagina2 {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    display: none;
+}
+#pagina2 h1{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-color: 3px solid aqua;
+    background-color: #176666;
+    color: aliceblue;
+}
+
+#pagina2 legend{
+    margin: 5px;
+    color: #086A87;
+    background: #D8D8D8;
+    
+}
+
+#pagina2 textarea{
+    width: 100%;
+    border: 2px solid #339999;
+}
+/*---------------pag3----------*/
+
+
+#pagina3 {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    display: none;
+}
+
+#pagina3 h1{
+    margin: 0 80px 0 0;
+    padding: 0 0 80px 0 0;
+    width: 100%;
+    border-color: 3px solid aqua;
+    background-color: #176666;
+    color: aliceblue;
+}
+#pagina3 textarea{
+    width: 100%;
+    height: 300px;
+    border: 2px solid #339999;
+}
+#pagina3 legend{
+    margin: 5px;
+    color: #086A87;
+    background: #D8D8D8;
+    
+}
+/*-------------------pag 4-------*/
+#pagina4 {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    display: none;
+}
+#pagina4 h1{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-color: 3px solid aqua;
+    background-color: #176666;
+    color: aliceblue;
+}
+#pagina4 textarea{
+    width: 100%;
+    height: 300px;
+    border: 2px solid #339999;
+}
+#pagina4 legend{
+    margin: 5px;
+    color: #086A87;
+    background: #D8D8D8;
+    
+}
+/*------------pag5------------*/
+#pagina5 {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    display: none;
+}
+
+#pagina5 h1{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-color: 3px solid aqua;
+    background-color: #176666;
+    color: aliceblue;
+}
+
+#pagina5 h3{
+    margin: 0;
+    padding: 0;
+    width: 27%;
+    color: #176666;
+    display: inline-block;
+}
+
+#pagina5 legend{
+    margin: 5px;
+    color: #086A87;
+    background: #D8D8D8;
+    
+}
+
+#contenedorLibros{
+    width: 100%;
+    height:230px; 
+    overflow-y: scroll;
+}
+
+#pagina5 input{
+    margin: 0;
+    padding: 0;
+    margin: 1px;
+    width: 70%;
+    height: 25px;
+    border: 2px solid #339999;
+    
+}
+
+/*#libronuevo{
+    width:100%; 
+    height:150px; 
+    overflow-y: scroll;
+}*/
+
+.titulo_libros{
+   padding: 0;
+    margin: 0 0 10px 0;
+    width: 24%;
+    color: #086A87;
+    background: #D8D8D8;
+    display: inline-block;
+}
+
+#pagina5 .aAgregarBiblio{
+    text-decoration: none;
+    background: #d8d8d8;
+    color: #086A87;
+    border: 1px outset #CCC;
+    margin: 1em 0; float: left; clear: left;
+    right: 50%;
+}
+
+#pagina5 .aAgregarBiblio:hover {
+    background: #CCB;
+}
+
+#pagina5 .aLibroEliminado{
+    text-decoration: none;
+    background: #d8d8d8;
+    color: #086A87;
+    border: 1px outset #CCC;
+    float: left; clear: left;
+}
+
+#pagina5 .aLibroEliminado:hover {
+    background: #CCB;
+}
+
+
+/*------------pag6------------*/
+#pagina6 {
+    margin: 0;
+    padding: 0px;
+    width: 90%;
+    display: none;
+}
+#pagina6 h1{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-color: 3px solid aqua;
+    background-color: #176666;
+    color: aliceblue;
+}
+
+#contenedorUnidades{
+    width: 100%;
+    height:830px; 
+    overflow-y: scroll;
+}
+#pagina6 #unidad {
+    margin: 2px 0;
+    padding: 0;
+    width: 35%;
+    color: #086A87;
+    text-align: left;
+    display: inline-block;
+    
+}
+
+#pagina6 #nombreunidad{
+    margin: 1px;
+    width: 62%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+#pagina6 #periodo {
+    margin: 2px 0;
+    padding: 0;
+    width: 75%;
+    color: #086A87;
+    text-align: left;
+    display: inline-block;
+    
+}
+
+#pagina6 #periodoacademico{
+    margin: 1px;
+    width: 22%;
+    height: 25px;
+    border: 2px solid #339999;
+}
+
+#pagina6 legend{
+    margin: 5px;
+    color: #086A87;
+    background: #D8D8D8;
+    
+}
+#pagina6 textarea{
+    width: 100%;
+    height: 100px;
+    border: 2px solid #339999;
+}
+
+#pagina6 td{
+    margin: 5px;
+    color: #086A87;
+}
+
+#unidadNueva{
+    width:100%; 
+    /*height:300px; 
+    overflow-y: scroll;*/
+}
+
+#pagina6 .aAgregarUnidad{
+    text-decoration: none;
+    background: #d8d8d8;
+    color: #086A87;
+    border: 1px outset #CCC;
+    float: left; clear: left;
+}
+
+#pagina6 .aAgregarUnidad:hover {
+    background: #CCB;
+}
+
+/*----------------pag7---------*/
+
+#pagina7 {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    display: none;
+}
+
+#pagina7 h1{
+    margin: 0 80px 0 0;
+    padding: 0 0 80px 0 0;
+    width: 100%;
+    border-color: 3px solid aqua;
+    background-color: #176666;
+    color: aliceblue;
+}
+#pagina7 textarea{
+    width: 100%;
+    height: 60px;
+    width: 360px;
+    resize : none;
+    border: 2px solid #339999;
+}
+#pagina7 legend{
+    margin: 5px;
+    color: #086A87;
+    background: #D8D8D8;
+    
+}
+
+#pagina7 .eliminar0{
+    text-decoration: none;
+    background: #d8d8d8;
+    color: #086A87;
+    border: 1px outset #CCC;
+    float: left; clear: left;
+    margin: 1em 0;
+}
+
+#pagina7 .eliminar0:hover {
+    background: #CCB;
+}
+
+#pagina7 .labelParcial{
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#pagina7 .aAgregarEvaluacion{
+    text-decoration: none;
+    background: #d8d8d8;
+    color: #086A87;
+    border: 1px outset #CCC;
+    margin: 1em 0; float: left; clear: left;
+}
+
+#pagina7 .aAgregarEvaluacion:hover {
+    background: #CCB;
+}
+
+#pagina7 .inputPuntaje{
+    size : 60px;
+    text-align: right;
+}
+
+/*--------------pag8------------*/
+#pagina8{
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    display: none;
+    
+}
+
+#pagina8 h1{
+    margin: 0 80px 0 0;
+    padding: 0 0 80px 0 0;
+    width: 100%;
+    border-color: 3px solid aqua;
+    background-color: #176666;
+    color: aliceblue;
+}
+
+#pagina8 td{
+    width: 15px;
+    text-align: center;
+}
+
+/*---------------boton------*/
+#boton{
+    width: 7em;
+   height: 3em;
+   background-color: #339999;;
+   position:absolute;
+   /*top: 47em;
+   left: 80em;*/
+   top: 86em;
+   left: 68em
+}
+
+#contenedor_derecho{
+    padding: 0;
+    width: 25%;
+    height: 950px;
+    display: block;
+    float: right;
+    background: #F2F2F2;
+}
+#contenedor_derecho #avisos{
+    margin: 20px 0 0 0;
+    float: right;
+    width: 80%;
+    border: 1px solid #339999;
+   
+}
+#contenedor_derecho textarea{
+    border: 2px solid #339999;
+}
+
+#calendario{
+    margin: 0;
+    float: right;
+    padding-top: 10px;
+    width: 100%;
+    display: block;  
+}
+
+
+
+#contenedor_derecho #datepicker{
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor_derecho .ui-datepicker{
+    width: 80%;
+    float: right;
+    border: 1px solid #339999;
+    
+}
+
+#contenedor_derecho .ui-datepicker .ui-datepicker-header{
+    background: #176666;
+    color: aliceblue;
+    
+}
+
+#contenedor_derecho .ui-datepicker th{
+    background: #eee ;
+    color: #339999;
+}
+
+#contenedor_derecho .ui-datepicker table{
+    
+}
+
+#contenedor_derecho .ui-state-default
+{
+    border: 1px solid #339999;
+}
+
+#contenedor_derecho .ui-state-active
+{
+    width:;
+    background: #339999;
+}
+
+
+
+footer{
+    padding: 0;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    height: 0px;
+    background: #339999;
+    position:bottom static;
+    bottom: 0;
+}
+
+footer h4{
+    color: #176666;
+    text-align: center;
+}
+footer .paginas_amigas{
+    
+    color: #339999;
+}
+
